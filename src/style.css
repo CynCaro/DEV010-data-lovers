@@ -1,0 +1,51 @@
+body {
+    background-image: url(./data/rickandmorty/img/back-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(212, 223, 81, 0.7);
+    height: 100px;
+    width: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    flex: 1; /* Ocupa todo el espacio disponible dentro del header */
+}
+
+input[type="search"] {
+    margin: 20px 20px;
+    padding: 10px;
+    border: 2px solid #cf5711; 
+    border-radius: 8px; 
+    color: #cf5711; 
+    width: 200px; 
+}
+
+.filters {
+}
+
+.flex-container {
+    display: flex; /*los inputs del contenedor se distribuirán en una sola fila */
+    flex-wrap: wrap; /* los inputs dentro del contenedor se ajustan automáticamente en filas adicionales si no caben en una sola fila */
+    justify-content: space-evenly;/* Distribuye el espacio entre los elementos del contenedor, lo que crea un espaciado equitativo entre los inputs */
+    align-items: center; /* Alinea los items verticalmente en el centro */
+    min-height: calc(100vh - 100px); /* Resta la altura del header para calcular la altura mín. del contenedor */
+    padding-top: 150px; /* Añade espacio en la parte superior para evitar que las cajas queden sobre el header */
+}
+
+.flex-item {
+    background-color: rgba(183, 217, 233, 1);
+    border-radius: 8px;
+    border: 15px solid #fff;
+    border-bottom-width: 70px;
+    margin: 10px;
+    height: 550px;
+    width: 350px;
+}
