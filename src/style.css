@@ -1,13 +1,14 @@
 
 body {
     background-image: url(./data/rickandmorty/img/back-2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 header {
-    background-image: url(./data/rickandmorty/img/wubba-lubba.png);
+    /*background-image: url(./data/rickandmorty/img/wubba-lubba.png);*/
     background-repeat: no-repeat;
+
     background-color: rgba(212, 223, 81, 0.7);
     height: 100px;
     width: 100%;
@@ -18,8 +19,15 @@ header {
 
 nav {
     display: flex;
-    justify-content: flex-end; /* Alinea el contenido a la derecha */
     flex: 1; /* Ocupa todo el espacio disponible dentro del header */
+}
+
+.navbar-brand {
+    justify-content: flex-start; /* Alinea imagen a la izquierda */
+  }
+
+form {
+    margin-left: auto; /* Alinea el formulario (y el campo de búsqueda) a la derecha */
 }
 
 input[type="search"] {
@@ -35,22 +43,65 @@ input[type="search"] {
 }
 
 .flex-container {
+    font-family: 'Raleway';
     display: flex; /*los inputs del contenedor se distribuirán en una sola fila */
     flex-wrap: wrap; /* los inputs dentro del contenedor se ajustan automáticamente en filas adicionales si no caben en una sola fila */
     justify-content: space-evenly;/* Distribuye el espacio entre los elementos del contenedor, lo que crea un espaciado equitativo entre los inputs */
     align-items: center; /* Alinea los items verticalmente en el centro */
     min-height: calc(100vh - 100px); /* Resta la altura del header para calcular la altura mín. del contenedor */
-    padding-top: 150px; /* Añade espacio en la parte superior para evitar que las cajas queden sobre el header */
+    padding-top: 300px; /* Añade espacio en la parte superior para evitar que las cajas queden sobre el header */
 }
 
 .flex-item {
     background-color: rgba(183, 217, 233, 1);
-    border-radius: 8px;
+    border-radius: 15px;
     border: 15px solid #fff;
-    border-bottom-width: 70px;
-    margin: 10px;
-    padding: 15px 0 0 50px;
-    /* height: 550px; */
-    width: 350px;
+    border-bottom-width: 50px;
+    margin: 30px;
+    padding: 15px 0 0 0px;
+    height: auto;
+    width: 200px;
+    overflow: hidden; /* Evita que el contenido se salga del ítem */
+    font-size: small;
 }
 
+img {
+    position:relative; 
+    top:-15px; /* aqui le daras un menos tanto dependiendo lo que nececites */
+    max-width: 100%; /* Asegura que la imagen no se salga del ítem */
+}
+h1 {
+    color: #208D44;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+    line-height: 1; /* Disminuye el interlineado a 1 (sin espacio entre líneas) */
+}
+/* Subheading */
+h3 {
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: normal; /* Disminuye el interlineado a 1.2 (espacio reducido entre líneas) */
+}
+button {
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    display: inline;
+    border: none;
+    border-radius: 10px;
+    background-color: #8ECA49;
+    margin: 10px;
+   
+    height: 41px;
+    width: 180px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  .btn:hover {
+    background-color: #016a5c; /*Cambo de color al pasar el mouse sobre el botón*/
+}
