@@ -9,10 +9,10 @@ data.results.forEach((character, index) => {   //estamos recorriendo todos los p
       <h1>${character.name}</h1>
       <button class="details-btn">Ver más</button> 
       <div class="character-details hidden">
-      <p>Status: ${character.status}</p>
-      <p>Especie: ${character.species}</p>
-      <p>Origin Name: ${character.origin.name}</p>
-      <p>Location Name: ${character.location.name}</p>
+      <h3>${character.status}</h3>
+      <h3>${character.species}</h3>
+      <h3>${character.origin.name}</h3>
+      <h3>${character.location.name}</h3>
       </div>
     </div>
   `;
