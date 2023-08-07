@@ -1,23 +1,24 @@
-import { example, anotherExample } from '../src/data.js';
+import { searchCharacters } from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('searchCharacters', () => {
+  it ('is a function',()=> {
+    expect (typeof searchCharacters).toBe('function');
+  })
+  it('returns characters matching the search input', () => {
+    expect(character.name.toLowerCase()).toBe('character');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+  it('should throw TypeError when invoked with wrong argument types', () => {
+    expect(searchInput(null)).toThrow();; //pendiente
+     });
+  
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+
+ describe('anotherExample', () => {
+   it('is a function', () => {
+      expect(typeof anotherExample).toBe('function');
+   });
+   it('returns `anotherExample`', () => {    
+    expect(anotherExample()).toBe('OMG');   }); });
