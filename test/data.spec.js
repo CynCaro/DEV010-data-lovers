@@ -1,24 +1,26 @@
 import { searchCharacters } from '../src/data.js';
-
+import datamock from './mockData.js'
 
 describe('searchCharacters', () => {
   it ('is a function',()=> {
     expect (typeof searchCharacters).toBe('function');
   })
-  it('returns characters matching the search input', () => {
-    expect(character.name.toLowerCase()).toBe('character');
-  });
 
-  it('should throw TypeError when invoked with wrong argument types', () => {
-    expect(searchInput(null)).toThrow();; //pendiente
-     });
+  it('Should have 1 character if input is Rick', ()=>{
+    const dataFiltered=searchCharacters('Rick', datamock)
+    expect(dataFiltered).toHaveLength(1);
+  })
+
+  it ('Should have 1 character if input is Summer', ()=>{
+    const dataFiltered=searchCharacters('Summer', datamock)
+    expect(dataFiltered).toHaveLength(1);
+  })
   
-  });
+  it('returns an empty container when search input is not found any names', ()=>{
+    const nonExistName = 'zzz';
+    const dataFiltered=searchCharacters(nonExistName, datamock)
+    expect(dataFiltered).toEqual([])
+  })
+});
+  
 
-
- describe('anotherExample', () => {
-   it('is a function', () => {
-      expect(typeof anotherExample).toBe('function');
-   });
-   it('returns `anotherExample`', () => {    
-    expect(anotherExample()).toBe('OMG');   }); });

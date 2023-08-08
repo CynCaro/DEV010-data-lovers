@@ -26,7 +26,7 @@ function assignButtonClickEvents() { //Función para asignar eventos click a los
 
 function showCharacters(characters) {
   container.innerHTML = "";       //Se muestra el contenedor vacio para mostrarnos la búsqueda
-  characters.forEach((character, index) => {    //aquí está recorreiendo al igual que al principioo
+  characters.forEach((character) => {    //aquí está recorreiendo al igual que al principioo
     const characterData = `
       <div class="flex-item">
         <img src="${character.image}">
@@ -44,8 +44,8 @@ function showCharacters(characters) {
   });
   assignButtonClickEvents(); // Asignar eventos click a los nuevos botones agregados.
 }
-showCharacters (data.results)
 assignButtonClickEvents(); // Ejecutar la función 1 vez al inicio para asignar eventos a los botones
+showCharacters (data.results)
   
 searchInput.addEventListener('input', () => {   //aquí escuchamos lo que se escribe en el input
   const filteredCharacters = searchCharacters (searchInput.value, data)
