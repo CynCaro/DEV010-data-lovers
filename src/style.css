@@ -6,9 +6,7 @@ body {
 }
 
 header {
-    /*background-image: url(./data/rickandmorty/img/wubba-lubba.png);*/
     background-repeat: no-repeat;
-
     background-color: rgba(212, 223, 81, 0.7);
     height: 100px;
     width: 100%;
@@ -22,6 +20,44 @@ nav {
     display: flex;
     flex: 1; /* Ocupa todo el espacio disponible dentro del header */
     position: relative;
+}
+.start {
+    background-image: url(./data/rickandmorty/img/back-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; /* Hacer flex para darles las siguientes propiedades:*/
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente los elementos */
+    /* min-height: 100vh; */
+}
+.start-h1 {
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.start-button {
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    align-items: center;
+    font-weight: 500;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    background-color: #D4DF51;
+    margin: 10px;
+    height: 41px;
+    width: 160px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.start-button:hover {
+    background-color: #689634; /*Cambio de color al pasar el mouse sobre el botón*/
 }
 .navbar-brand {
     display: flex;
@@ -44,6 +80,10 @@ input[type="search"] {
 }
 
 .filters {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center;
 }
 
 .flex-container {
@@ -131,6 +171,7 @@ button.details-btn:hover {
     .navbar-brand {
         justify-content: flex-start; /*FALTA QUE LA IMAGEN CAMBIE DE TAMAÑO P/ENTREN LOS FILTROS*/
         max-width: 80%; /* Establece un ancho máximo para la imagen */
+        min-width: min-content;
     }
 }
 
