@@ -1,13 +1,13 @@
 body {
-    background-image: url(./data/rickandmorty/img/back-2.png);
+    background-image: url(./data/rickandmorty/img/back-3.png);
     background-repeat: repeat;
     background-size: contain;
-    margin-top: 100px; /* Agrega un margen superior igual a la altura del header */
+    margin-top: 120px; /* Agrega un margen superior igual a la altura del header */
 }
 
 header {
     background-repeat: no-repeat;
-    background-color: rgba(212, 223, 81, 0.7);
+    background-color: rgba(212, 223, 81, 0.9);
     height: 100px;
     width: 100%;
     position: fixed; 
@@ -21,44 +21,7 @@ nav {
     flex: 1; /* Ocupa todo el espacio disponible dentro del header */
     position: relative;
 }
-.start {
-    background-image: url(./data/rickandmorty/img/back-1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex; /* Hacer flex para darles las siguientes propiedades:*/
-    flex-direction: column; /* Alinea los elementos verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente los elementos */
-    /* min-height: 100vh; */
-}
-.start-h1 {
-    color: #FFFFFF;
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-}
 
-.start-button {
-    color: #000000;
-    font-family: 'Raleway', sans-serif;
-    align-items: center;
-    font-weight: 500;
-    display: inline-block;
-    border: none;
-    border-radius: 10px;
-    background-color: #D4DF51;
-    margin: 10px;
-    height: 41px;
-    width: 160px;
-    cursor: pointer;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.start-button:hover {
-    background-color: #689634; /*Cambio de color al pasar el mouse sobre el botón*/
-}
 .navbar-brand {
     display: flex;
     justify-content: flex-start; /* Alinea imagen a la izquierda */
@@ -80,20 +43,82 @@ input[type="search"] {
 }
 
 .filters {
-    display: flex;
-    flex-direction: column; /* Alinea los elementos verticalmente */
+    font-family: 'Raleway', sans-serif;
+    padding: 1%;
+    display:flex;
+    flex-direction:column; /* Cambia a una columna para poner los filtros debajo de la imagen */
     align-items: center; /* Centra horizontalmente */
     justify-content: center;
+    width: 100%;
+}
+
+.filter-options label { /* Dar formato a las etiquetas <label> dentro del contenedor de filtros */
+    /* Estilos para las etiquetas de los filtros */
+    color: #333; /* Cambia el color de texto */
+    font-weight: normal; /* Cambia el peso de la fuente */
+    margin-right: 5px; /* Agrega un margen a la derecha para separar de los select */
+    font-size: small;
+  }
+  
+.filter-options { /* Da formato y estilo al contenedor que agrupa las opciones de filtro en la página */
+    font-family: 'Raleway', sans-serif;
+    width: 100%; /* Ajusta el ancho para que ocupe el ancho completo */
+    display: flex; /* Cambia a flex para alinear horizontalmente los filtros */
+    justify-content: center; /* Centra horizontalmente los filtros */
+    align-items: center;
+    
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente dentro del contenedor */
+    align-items: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    margin-bottom: 1px; /* Espacio entre la imagen y los filtros */
+}
+
+select {
+    writing-mode: horizontal-tb !important; /* Modo de escritura horizontal de izquierda a derecha */
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: small;
+    font-family: 'Raleway';
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    box-sizing: border-box;
+    align-items: center;
+    white-space-collapse: preserve;
+    text-wrap: nowrap;
+    -webkit-rtl-ordering: logical;
+    background-color: field;
+    cursor: default;
+    margin: 1%;
+    border-width: 0px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    border-radius: 15px;
+    padding: 6px;
+    width: 20%;
 }
 
 .flex-container {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     display: flex; /*los inputs del contenedor se distribuirán en una sola fila */
     flex-wrap: wrap; /* los inputs dentro del contenedor se ajustan automáticamente en filas adicionales si no caben en una sola fila */
     justify-content: space-evenly;/* Distribuye el espacio entre los elementos del contenedor, lo que crea un espaciado equitativo entre los inputs */
     align-items: center; /* Alinea los items verticalmente en el centro */
     min-height: calc(100vh - 100px); /* Resta la altura del header para calcular la altura mín. del contenedor */
-    padding-top: 300px; /* Añade espacio en la parte superior para evitar que las cajas queden sobre el header */
+    padding-top: 0%; /* Añade espacio en la parte superior para evitar que las cajas queden sobre el header */
 }
 
 .flex-item {
@@ -111,7 +136,7 @@ input[type="search"] {
 
 img {
     position:relative; 
-    top:-15px; /* aqui le daras un menos tanto dependiendo lo que nececites */
+    top:-15px; /* aqui le daras un menos tanto dependiendo lo que necesites */
     max-width: 100%; /* Asegura que la imagen no se salga del ítem */
     border-radius: 15px;
 }
