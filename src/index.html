@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Agrega la importación de la fuente Raleway -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap">
   </head>
   <body>
     <header>
@@ -15,20 +17,37 @@
       </nav>
     </header>
     <div class="filters">
-      <select>GENERO</select> <br>
-      <select>ESPECIE</select>
+      <div class="logo-container">
+        <img src="./data/rickandmorty/img/logo.png" alt="Logo" class="logo">
+      </div>
+      
+      <div class="filter-options">
+        <label for="filterGender">Gender:</label>
+        <select id="filterGender">
+          <option value="all">All</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      
+        <label for="filterSpecies">Species:</label>
+        <select id="filterSpecies">
+         <option value="all">All</option>
+         <option value="human">Human</option>
+         <option value="alien">Alien</option>
+         <!-- Agrega más opciones de especies si es necesario -->
+        </select>
+      </div>
     </div>
     <div class="flex-container" id="characterList">
-     <div class="flex-item">
+      <div class="flex-item">
         <h1></h1>
         <h3></h3>
         <h3></h3>
         <h3></h3>
         <h3></h3>
         <button class="details-btn">Ver más</button>
-        <div class="character-details hidden">
-     </div>
-     </div>
+        <div class="character-details hidden"></div>
+      </div>
     </div>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
