@@ -5,5 +5,18 @@ export function searchCharacters (name, data){
   });
   return filteredCharacters  
 }
-
-
+export function sortByStatus (data,selectedStatus) {
+  if(selectedStatus==='all'){ 
+    return data.slice(); // slice= retorna un nuevo arreglo 
+  }
+  const filteredData = data.filter(character=>character.status === selectedStatus);  //primero se debe filtrar para ordenar
+  return filteredData.sort((a,b,)=> {   //sort se le debe dar a la matriz,en este caso
+    if (a.status< b.status) {
+      return -1;
+    }
+    if (a.status> b.status){
+      return 1;
+    }
+    return 0;
+  });
+} 

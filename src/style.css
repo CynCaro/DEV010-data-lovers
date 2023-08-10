@@ -57,7 +57,7 @@ input[type="search"] {
     color: #333; /* Cambia el color de texto */
     font-weight: normal; /* Cambia el peso de la fuente */
     margin-right: 5px; /* Agrega un margen a la derecha para separar de los select */
-    font-size: small;
+    font-size: 20px;
   }
   
 .filter-options { /* Da formato y estilo al contenedor que agrupa las opciones de filtro en la página */
@@ -81,7 +81,7 @@ select {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: normal;
-    font-size: small;
+    font-size: 20px;
     font-family: 'Raleway';
     text-rendering: auto;
     color: fieldtext;
