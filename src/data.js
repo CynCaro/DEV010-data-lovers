@@ -20,3 +20,18 @@ export function sortByStatus (data,selectedStatus) {
     return 0;
   });
 } 
+export function sortBySpecies (data,selectedSpecies) {
+  if(selectedSpecies==='all'){ 
+    return data.slice(); // slice= retorna un nuevo arreglo 
+  }
+  const filteredData = data.filter(character=>character.species === selectedSpecies);  //primero se debe filtrar para ordenar
+  return filteredData.sort((a,b,)=> {   //sort se le debe dar a la matriz,en este caso
+    if (a.species< b.species) {
+      return -1;
+    }
+    if (a.species> b.species){
+      return 1;
+    }
+    return 0;
+  });
+} 
