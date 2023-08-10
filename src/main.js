@@ -1,8 +1,10 @@
 import data from './data/rickandmorty/rickandmorty.js';
 import { searchCharacters } from './data.js';
+import { sortByStatus } from './data.js';
 
 const container = document.querySelector(".flex-container");
 const searchInput =document.getElementById("searchInput");
+const filterStatus = document.getElementById("filterStatus");
 
 function showDetails(index) { // Función para mostrar los detalles del personaje por índice
   const characterDetailsDiv = container.querySelectorAll(".character-details")[index]; //Obtiene el elemento HTML que contiene los detalles del personaje correspondiente al índice(index). Selecciona todos los elementos que tienen la clase "character-details"
@@ -51,4 +53,11 @@ searchInput.addEventListener('input', () => {   //aquí escuchamos lo que se esc
   const filteredCharacters = searchCharacters (searchInput.value, data)
   showCharacters(filteredCharacters);  //mostramos los personajes de ese resultado
 });
- 
+
+filterStatus.addEventListener('change', ()=>{  //para los select se usa evento change
+  const selectedStatus=filterStatus.value;
+  const sortedData =sortByStatus(data.results, selectedStatus);
+  showCharacters(sortedData)
+});
+
+
