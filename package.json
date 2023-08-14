@@ -33,5 +33,9 @@
   },
   "dependencies": {
     "minimatch": "^3.0.5"
+  },
+  "jest":{
+    "collectCoverage":true,
+    "collectCoverageFrom":["src/data.js"]
   }
 }
