@@ -10,7 +10,7 @@ export function sortByStatus (data,selectedStatus) {
     return data.slice(); // slice= retorna un nuevo arreglo 
   }
   const filteredData = data.filter(character=>character.status === selectedStatus);  //primero se debe filtrar para ordenar
-  return filteredData.sort((a,b,)=> {   //sort se le debe dar a la matriz,en este caso
+  return filteredData.sort((a,b)=> {   //sort se le debe dar a la matriz,en este caso
     if (a.status< b.status) {
       return -1;
     }
@@ -25,7 +25,7 @@ export function sortBySpecies (data,selectedSpecies) {
     return data.slice(); // slice= retorna un nuevo arreglo 
   }
   const filteredData = data.filter(character=>character.species === selectedSpecies);  //primero se debe filtrar para ordenar
-  return filteredData.sort((a,b,)=> {   //sort se le debe dar a la matriz,en este caso
+  return filteredData.sort((a,b)=> {   //sort se le debe dar a la matriz,en este caso
     if (a.species< b.species) {
       return -1;
     }
