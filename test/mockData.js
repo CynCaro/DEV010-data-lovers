@@ -9,14 +9,26 @@ export default {
     {
       "id": 1,
       "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
     },
     {
       "id": 2,
       "name":  "Morty Smith",
+      "status": "Alive",
+      "species": "Human",
     },
     {
       "id": 3,
       "name": "Summer Smith",
+      "status": "Alive",
+      "species": "Human",
+    },
+    {
+      "id": 4,
+      "name": "Summer",
+      "status": "Alive",
+      "species": "Alien",
     }
   ]
 }
