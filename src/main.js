@@ -3,7 +3,7 @@ import { searchCharacters } from './data.js';
 import { sortByStatus, sortBySpecies } from './data.js';
 
 const container = document.querySelector(".flex-container");
-const searchInput =document.getElementById("searchInput");
+const searchInput = document.getElementById("searchInput");
 const filterStatus = document.getElementById("filterStatus");
 const filterSpecies = document.getElementById("filterSpecies");
 
@@ -17,7 +17,7 @@ function assignButtonClickEvents() { //Función para asignar eventos click a los
   //querySelectorAll= función p/seleccionar todos los elementos que coincidan con ese selector ("details.btn")
   //const showDetailsBtns  a esta variable se le asigna el resultado de querySelectorAll, por lo tanto hará una lista (o NodeList) de todos los elementos que tienen la clase "details-btn" dentro de container. 
   //nodeList es una colección en vivo, lo que significa que los cambios en el DOM se reflejan en la colección.
-  
+
   //Agrega un evento click a c/btn con la clase "details-btn". Cuando un boton es clickeado,se ejecuta la función showDetailt con el indice del botón clickeado, lo que muestra/oculta los detalles del personaje correspondiente al botón.
   //Así c/btn tiene su evento click asociado y al hacer click en un btn específico mostrará los detalles del personaje correcto. 
   showDetailsBtns.forEach((btn, index) => {
@@ -47,22 +47,24 @@ function showCharacters(characters) {
   });
   assignButtonClickEvents(); // Asignar eventos click a los nuevos botones agregados.
 }
-assignButtonClickEvents(); // Ejecutar la función 1 vez al inicio para asignar eventos a los botones
-showCharacters (data.results)
-  
+document.addEventListener("DOMContentLoaded", () => {
+  assignButtonClickEvents(); // Ejecutar la función 1 vez al inicio para asignar eventos a los botones
+  showCharacters(data.results)
+})
+
 searchInput.addEventListener('input', () => {   //aquí escuchamos lo que se escribe en el input
-  const filteredCharacters = searchCharacters (searchInput.value, data)
+  const filteredCharacters = searchCharacters(searchInput.value, data)
   showCharacters(filteredCharacters);  //mostramos los personajes de ese resultado
 });
 
-filterStatus.addEventListener('change', ()=>{  //para los select se usa evento change
-  const selectedStatus=filterStatus.value;
-  const sortedData =sortByStatus(data.results, selectedStatus);
+filterStatus.addEventListener('change', () => {  //para los select se usa evento change
+  const selectedStatus = filterStatus.value;
+  const sortedData = sortByStatus(data.results, selectedStatus);
   showCharacters(sortedData)
 });
 
-filterSpecies.addEventListener('change', ()=>{  //para los select se usa evento change
-  const selectedSpecies=filterSpecies.value;
-  const sortedData =sortBySpecies(data.results, selectedSpecies);
+filterSpecies.addEventListener('change', () => {  //para los select se usa evento change
+  const selectedSpecies = filterSpecies.value;
+  const sortedData = sortBySpecies(data.results, selectedSpecies);
   showCharacters(sortedData)
 });
