@@ -30,16 +30,39 @@ nav {
   }
 
 form {
-    margin-left: auto; /* Alinea el formulario (y el campo de búsqueda) a la derecha */
+    justify-content: flex-end; /* Alinea el formulario a la derecha */
+    align-items: center;
 }
 
 input[type="search"] {
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    background-color: #00AFC8;
+    margin: 20px 20px;
+    margin-right: auto; /* Alinea el campo de búsqueda a la derecha */
+    padding: 10px;
+    border-radius: 25px; 
+    border: none;
+    width: 200px;
+    background-image: url(./data/rickandmorty/img/search-solid.svg); /* Ruta de la imagen del icono */
+    background-size: 15px 15px; /* Ajusta el tamaño del icono */
+    background-position: 10px center; /* Alinea el icono dentro del campo */
+    background-repeat: no-repeat; /* Evita que el icono se repita */
+    padding-left: 40px; /* Deja espacio para el icono en el lado derecho */
+    box-sizing: border-box; /* Incluye el padding en el ancho total del input */
+}
+input[type="search"]::placeholder {
+    color: #FFFFFF; /* Cambia el color del texto "Search" de placeholder */
+}
+
+input[type="text"] {
+    font-family: 'Raleway', sans-serif;
     margin: 20px 20px;
     padding: 10px;
-    border: 2px solid #cf5711; 
+    border: 2px solid #8ECA49; 
     border-radius: 8px; 
-    color: #cf5711; 
-    width: 250px; 
+    color: #706D6D; 
+    width: 400px; 
 }
 
 .filters {
@@ -158,6 +181,11 @@ h3 {
     font-size: 17px;
     line-height: normal; /* Disminuye el interlineado (espacio reducido entre líneas) */
 }
+
+button.compute-btn {
+    width: 70px; /* Cambia el ancho del botón compute-btn */
+}
+
 button {
     color: #FFFFFF;
     font-family: 'Raleway', sans-serif;
@@ -172,7 +200,11 @@ button {
     cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
   }
+
 button.details-btn:hover {
+    background-color: #689634; /*Cambio de color al pasar el mouse sobre el botón*/
+}
+button.compute-btn:hover {
     background-color: #689634; /*Cambio de color al pasar el mouse sobre el botón*/
 }
 .character-details.hidden { /* Agregamos una clase para ocultar los detalles inicialmente */
@@ -195,7 +227,7 @@ button.details-btn:hover {
     }
     .navbar-brand {
         justify-content: flex-start; /*FALTA QUE LA IMAGEN CAMBIE DE TAMAÑO P/ENTREN LOS FILTROS*/
-        max-width: 80%; /* Establece un ancho máximo para la imagen */
+        max-width: 70%; /* Establece un ancho máximo para la imagen */
         min-width: min-content;
     }
 }
