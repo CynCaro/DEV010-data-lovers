@@ -26,9 +26,9 @@ export default {
     },
     {
       "id": 4,
-      "name": "Summer",
+      "name": "Beth Smith",
       "status": "Alive",
-      "species": "Alien",
+      "species": "Human",
     }
   ]
 }
