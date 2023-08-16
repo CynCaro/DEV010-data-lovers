@@ -42,3 +42,9 @@ export function sortBySpecies(data, selectedSpecies) {
     }
   });
 } 
+
+export function showRandomCharacter (data){
+  const randomIndex= Math.floor(Math.random()* data.length);
+  const randomChar=data[randomIndex];
+  return randomChar;
+}
