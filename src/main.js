@@ -1,11 +1,12 @@
 import data from './data/rickandmorty/rickandmorty.js';
 import { searchCharacters } from './data.js';
-import { sortByStatus, sortBySpecies } from './data.js';
+import { sortByStatus, sortBySpecies, showRandomCharacter } from './data.js';
 
 const container = document.querySelector(".flex-container");
 const searchInput = document.getElementById("searchInput");
 const filterStatus = document.getElementById("filterStatus");
 const filterSpecies = document.getElementById("filterSpecies");
+const randomCharacter = document.querySelector(".compute-btn") //usamos query ya que solo buscamos 1 elemento
 
 function showDetails(index) { // Función para mostrar los detalles del personaje por índice
   const characterDetailsDiv = container.querySelectorAll(".character-details")[index]; //Obtiene el elemento HTML que contiene los detalles del personaje correspondiente al índice(index). Selecciona todos los elementos que tienen la clase "character-details"
@@ -34,7 +35,7 @@ function showCharacters(characters) {
       <div class="flex-item">
         <img src="${character.image}">
         <h1>${character.name}</h1>
-        <button class="details-btn">Ver más</button>
+        <button class="details-btn">Show info</button>
         <div class="character-details hidden">
           <h3>${character.status}</h3>
           <h3>${character.species}</h3>
@@ -47,6 +48,26 @@ function showCharacters(characters) {
   });
   assignButtonClickEvents(); // Asignar eventos click a los nuevos botones agregados.
 }
+
+function showCharacter(character) {
+  container.innerHTML = "";       //Se muestra el contenedor vacio para mostrarnos la búsqueda
+  const characterData = `
+      <div class="flex-item">
+        <img src="${character.image}">
+        <h1>${character.name}</h1>
+        <button class="details-btn">Show info</button>
+        <div class="character-details hidden">
+          <h3>${character.status}</h3>
+          <h3>${character.species}</h3>
+          <h3>${character.origin.name}</h3>
+          <h3>${character.location.name}</h3>
+        </div>
+      </div>
+    `;
+  container.insertAdjacentHTML("beforeend", characterData);
+  assignButtonClickEvents();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   assignButtonClickEvents(); // Ejecutar la función 1 vez al inicio para asignar eventos a los botones
   showCharacters(data.results)
@@ -67,4 +88,16 @@ filterSpecies.addEventListener('change', () => {  //para los select se usa event
   const selectedSpecies = filterSpecies.value;
   const sortedData = sortBySpecies(data.results, selectedSpecies);
   showCharacters(sortedData)
+});
+
+randomCharacter.addEventListener("click", (event)=>{
+  event.preventDefault(); //prevenir comportamientos de recarga no deseados
+  
+  if(computeStats.value.trim() === "") {
+    alert("Please enter your name");
+  } else {
+    container.innerHTML = ""; // Limpia el contenido actual
+    const randomChar=showRandomCharacter(data.results);
+    showCharacter(randomChar);
+  }
 });
