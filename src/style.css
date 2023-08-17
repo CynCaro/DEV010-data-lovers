@@ -18,20 +18,23 @@ header {
 
 nav {
     display: flex;
-    flex: 1; /* Ocupa todo el espacio disponible dentro del header */
+    justify-content: space-between;
     position: relative;
 }
 
 .navbar-brand {
-    display: flex;
-    justify-content: flex-start; /* Alinea imagen a la izquierda */
-    z-index: 300;
     margin-left: 20px; /* Agrega un margen a la izquierda para separarla del campo de búsqueda */
-  }
+    width: 100%;
+    max-width: 200px;
+}
 
 form {
-    justify-content: flex-end; /* Alinea el formulario a la derecha */
+    display: flex;
+    justify-content: space-between; /* Alinea el formulario a la derecha */
     align-items: center;
+    margin-right: 20px;
+    margin-top: 17px;
+    height: 100%;
 }
 
 input[type="search"] {
@@ -56,13 +59,17 @@ input[type="search"]::placeholder {
 }
 
 input[type="text"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: 'Raleway', sans-serif;
-    margin: 20px 20px;
+    margin: 10px;
     padding: 10px;
     border: 2px solid #8ECA49; 
     border-radius: 8px; 
     color: #706D6D; 
-    width: 400px; 
+    width: 200px; 
 }
 
 .filters {
@@ -183,6 +190,9 @@ h3 {
 }
 
 button.compute-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 70px; /* Cambia el ancho del botón compute-btn */
 }
 

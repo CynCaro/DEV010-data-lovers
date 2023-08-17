@@ -6,7 +6,9 @@ const container = document.querySelector(".flex-container");
 const searchInput = document.getElementById("searchInput");
 const filterStatus = document.getElementById("filterStatus");
 const filterSpecies = document.getElementById("filterSpecies");
-const randomCharacter = document.querySelector(".compute-btn") //usamos query ya que solo buscamos 1 elemento
+const randomCharacter = document.querySelector(".compute-btn"); //usamos query ya que solo buscamos 1 elemento
+const computeStats = document.getElementById("computeStats"); 
+
 
 function showDetails(index) { // Función para mostrar los detalles del personaje por índice
   const characterDetailsDiv = container.querySelectorAll(".character-details")[index]; //Obtiene el elemento HTML que contiene los detalles del personaje correspondiente al índice(index). Selecciona todos los elementos que tienen la clase "character-details"
@@ -100,4 +102,8 @@ randomCharacter.addEventListener("click", (event)=>{
     const randomChar=showRandomCharacter(data.results);
     showCharacter(randomChar);
   }
+});
+
+document.getElementById("resetBtn").addEventListener('click', function () {
+  document.getElementById("computeStats").value = ""; // Limpiar el campo de entrada
 });
