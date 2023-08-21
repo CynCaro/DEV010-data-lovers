@@ -1,4 +1,4 @@
-import { searchCharacters, sortByStatus, sortBySpecies } from '../src/data.js';
+import { searchCharacters, sortByStatus, sortBySpecies, showRandomCharacter } from '../src/data.js';
 import datamock from './mockData.js'
 
 describe('searchCharacters', () => {
@@ -168,4 +168,20 @@ describe('sortBySpecies', () => {
 
     expect(result).toEqual([]);
   });
+});
+
+describe('showRandomCharacter', () => {
+  it('is a function', () => {
+    expect(typeof showRandomCharacter).toBe('function');
+  })
+
+  it('should return a random character from the provided data', () => {
+    const data = [
+      {name: 'Character A'},
+      {name: 'Character B'},
+      {name: 'Character C'},
+    ]
+    const randomChar = showRandomCharacter(data);
+    expect(data).toContainEqual(randomChar);
+  })
 });

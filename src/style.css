@@ -33,26 +33,26 @@ form {
     justify-content: space-between; /* Alinea el formulario a la derecha */
     align-items: center;
     margin-right: 20px;
-    margin-top: 17px;
+    margin-top: 20px;
     height: 100%;
 }
 
 input[type="search"] {
-    color: #FFFFFF;
     font-family: 'Raleway', sans-serif;
-    background-color: #00AFC8;
-    margin: 20px 20px;
-    margin-right: auto; /* Alinea el campo de búsqueda a la derecha */
+    margin: 10px;
     padding: 10px;
-    border-radius: 25px; 
     border: none;
+    border-radius: 25px; 
+    color: #FFFFFF;
     width: 200px;
+    background-color: #00AFC8;
     background-image: url(./data/rickandmorty/img/search-solid.svg); /* Ruta de la imagen del icono */
     background-size: 15px 15px; /* Ajusta el tamaño del icono */
     background-position: 10px center; /* Alinea el icono dentro del campo */
     background-repeat: no-repeat; /* Evita que el icono se repita */
     padding-left: 40px; /* Deja espacio para el icono en el lado derecho */
     box-sizing: border-box; /* Incluye el padding en el ancho total del input */
+    margin-left: auto; /* Alinea el campo de búsqueda a la derecha */
 }
 input[type="search"]::placeholder {
     color: #FFFFFF; /* Cambia el color del texto "Search" de placeholder */
@@ -154,7 +154,7 @@ select {
 .flex-item {
     background-color: #FFFFFF;
     border-radius: 15px;
-    border: 15px solid #fff;
+    border: 10px solid #fff;
     border-bottom-width: 15px;
     margin: 30px;
     padding: 15px 0 0 0px;
@@ -189,11 +189,20 @@ h3 {
     line-height: normal; /* Disminuye el interlineado (espacio reducido entre líneas) */
 }
 
-button.compute-btn {
+button.compute-btn, button.reset-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 70px; /* Cambia el ancho del botón compute-btn */
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    background-color: #689634;
+    margin: 10px;
+    height: 41px;
+
 }
 
 button {
@@ -214,8 +223,8 @@ button {
 button.details-btn:hover {
     background-color: #689634; /*Cambio de color al pasar el mouse sobre el botón*/
 }
-button.compute-btn:hover {
-    background-color: #689634; /*Cambio de color al pasar el mouse sobre el botón*/
+button.compute-btn:hover, button.reset-btn:hover {
+    background-color: #446221; /*Cambio de color al pasar el mouse sobre el botón*/
 }
 .character-details.hidden { /* Agregamos una clase para ocultar los detalles inicialmente */
     display: none;

@@ -7,7 +7,7 @@ const searchInput = document.getElementById("searchInput");
 const filterStatus = document.getElementById("filterStatus");
 const filterSpecies = document.getElementById("filterSpecies");
 const randomCharacter = document.querySelector(".compute-btn"); //usamos query ya que solo buscamos 1 elemento
-const computeStats = document.getElementById("computeStats"); 
+const computeStats = document.getElementById("computeStats");
 
 
 function showDetails(index) { // Función para mostrar los detalles del personaje por índice
@@ -92,14 +92,14 @@ filterSpecies.addEventListener('change', () => {  //para los select se usa event
   showCharacters(sortedData)
 });
 
-randomCharacter.addEventListener("click", (event)=>{
+randomCharacter.addEventListener("click", (event) => {
   event.preventDefault(); //prevenir comportamientos de recarga no deseados
-  
-  if(computeStats.value.trim() === "") {
+
+  if (computeStats.value.trim() === "") {
     alert("Please enter your name");
   } else {
     container.innerHTML = ""; // Limpia el contenido actual
-    const randomChar=showRandomCharacter(data.results);
+    const randomChar = showRandomCharacter(data.results);
     showCharacter(randomChar);
   }
 });
