@@ -46,7 +46,6 @@ describe('sortByStatus', () => {
     { "name": "Character A", "status": "Dead" },
     { "name": "Character B", "status": "Alive" },
     { "name": "Character C", "status": "Unknown" },
-    // ...otros personajes
   ];
 
   it('is a function', () => {
@@ -118,8 +117,6 @@ describe('sortByStatus', () => {
 
     expect(result).toEqual([]);
   });
-
-  // Pruebas adicionales para otros estados y situaciones
 });
 
 describe('sortBySpecies', () => {
@@ -212,7 +209,7 @@ describe('showRandomCharacter', () => {
     expect(data).toContainEqual(randomChar);
   });
 
-  test('should return the only character when data has one element', () => {
+  it ('should return the only character when data has one element', () => {
     const data = [{ name: 'Only Character' }];
     const result = showRandomCharacter(data);
     expect(result).toEqual({ name: 'Only Character' });
@@ -229,7 +226,7 @@ describe('showRandomCharacter', () => {
     expect(result).toEqual([0]);
   });
 
-  test('should return [0] when data is not provided', () => {
+  it ('should return [0] when data is not provided', () => {
     const result = showRandomCharacter();
 
     expect(result).toEqual([0]);
