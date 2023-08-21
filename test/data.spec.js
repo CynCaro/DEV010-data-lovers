@@ -31,7 +31,7 @@ describe('searchCharacters', () => {
       expect(character.name.toLowerCase()).toContain('rick');
     })
   });
-  
+
   it('handles non-string input', () => {
     const nonStringInput = 123; // Por ejemplo, un número
     const dataFiltered = searchCharacters(nonStringInput, datamock);
@@ -41,6 +41,7 @@ describe('searchCharacters', () => {
 });
 
 describe('sortByStatus', () => {
+  const createCharacter = (name, status) => ({ name, status });
   const testData = [
     { "name": "Character A", "status": "Dead" },
     { "name": "Character B", "status": "Alive" },
@@ -65,10 +66,23 @@ describe('sortByStatus', () => {
     }
   });
 
+  it('Sorting status', () => { // Verifica si la función ordena correctamente los datos según la especie "Alive"
+    const data = [
+      createCharacter("Character A", "Alive"),
+      createCharacter("Character B", "Alive"),
+    ];
+    const selectedStatus = "Alive";
+    const expectedSortedData = [
+      { name: "Character A", status: "Alive" },
+      { name: "Character B", status: "Alive" },
+    ];
+    expect(sortByStatus(data, selectedStatus)).toEqual(expectedSortedData);
+  });
+
   it('returns a copy of the original data when selectedStatus is "all"', () => {
     const selectedStatus = 'all';
     const result = sortByStatus(testData, selectedStatus);
-   
+
     expect(result).toEqual(testData); // Verifica que el bloque "if" se ejecutó y se copiaron los datos originales.
   });
 
@@ -133,6 +147,19 @@ describe('sortBySpecies', () => {
     }
   });
 
+  it('Sorting species', () => { // Verifica si la función ordena correctamente los datos según la especie "Human"
+    const data = [
+      createCharacter("Character A", "Human"),
+      createCharacter("Character B", "Human"),
+    ];
+    const selectedSpecies = "Human";
+    const expectedSortedData = [
+      { species: "Human", name: "Character A" },
+      { species: "Human", name: "Character B" },
+    ];
+    expect(sortBySpecies(data, selectedSpecies)).toEqual(expectedSortedData);
+  });
+
   it('returns a copy of the original data when selectedSpecies is "all"', () => {
     const data = [
       createCharacter("Character A", "Human"),
@@ -173,15 +200,38 @@ describe('sortBySpecies', () => {
 describe('showRandomCharacter', () => {
   it('is a function', () => {
     expect(typeof showRandomCharacter).toBe('function');
-  })
+  });
 
   it('should return a random character from the provided data', () => {
     const data = [
-      {name: 'Character A'},
-      {name: 'Character B'},
-      {name: 'Character C'},
+      { name: 'Character A' },
+      { name: 'Character B' },
+      { name: 'Character C' },
     ]
     const randomChar = showRandomCharacter(data);
     expect(data).toContainEqual(randomChar);
-  })
+  });
+
+  test('should return the only character when data has one element', () => {
+    const data = [{ name: 'Only Character' }];
+    const result = showRandomCharacter(data);
+    expect(result).toEqual({ name: 'Only Character' });
+  });
+
+  it('should return [0] when data is null', () => {
+    const result = showRandomCharacter(null);
+    expect(result).toEqual([0]);
+  });
+
+  it('should return [0] when data is empty', () => {
+    const emptyData = [];
+    const result = showRandomCharacter(emptyData);
+    expect(result).toEqual([0]);
+  });
+
+  test('should return [0] when data is not provided', () => {
+    const result = showRandomCharacter();
+
+    expect(result).toEqual([0]);
+  });
 });

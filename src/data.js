@@ -44,7 +44,10 @@ export function sortBySpecies(data, selectedSpecies) {
 } 
 
 export function showRandomCharacter (data){
-  const randomIndex= Math.floor(Math.random()* data.length);
-  const randomChar=data[randomIndex];
+  if (!data || data.length === 0) { // Si el conjunto de datos está vacío o no se proporcionó, devuelve 0
+    return [0]; 
+  }
+  const randomIndex = Math.floor(Math.random()* data.length);
+  const randomChar = data[randomIndex];
   return randomChar;
 }
