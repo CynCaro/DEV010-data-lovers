@@ -11,8 +11,10 @@ Pero eso no es todo. Si deseas explorar más allá, tenemos una vasta colección
 
 ¿Buscas a ese personaje escurridizo que solo apareció una vez en un capítulo? No te preocupes, nuestra barra de búsqueda te ayudará a encontrarlo en un abrir y cerrar de portales. ¡La diversión de explorar el multiverso ahora está en tus manos!
 
-Así que, fanática intrépida, prepára/e para sumergirte en un océano de datos, aventuras y personajes estrafalarios. Nuestra página te ofrece la herramienta definitiva para saciar tu curiosidad y explorar todos los recovecos de la serie. 
-¡[Haz clic](aquí va la url), descubre y diviértete en el maravilloso mundo de Rick y Morty como nunca antes!
+Así que, fanática intrépida, prepárate para sumergirte en un océano de datos, aventuras y personajes estrafalarios. Nuestra página te ofrece la herramienta definitiva para saciar tu curiosidad y explorar todos los recovecos de la serie.  
+[Haz clic](https://ivonneconde.github.io/DEV010-data-lovers/src/)  
+[Haz clic](https://cyncaro.github.io/DEV010-data-lovers/src/)  
+¡Descubre y diviértete en el maravilloso mundo de Rick y Morty como nunca antes!
 
 
 ***
@@ -23,7 +25,8 @@ Para esta divertida aventura, iniciamos con un prototipo a lápiz (pluma) y pape
 ![Prototipo-baja1](src/data/rickandmorty/img/Prototipo-baja1.jpg)
 ![Prototipo-baja2](src/data/rickandmorty/img/Prototipo-baja2.jpg)
 
-Despúes, pasamos a hacerlo un poco más real.
+Después, pasamos a hacerlo un poco más real.
+
 ![Protitipo1](src/data/rickandmorty/img/Prototipo1.jpg)
 ![Prototipo2](src/data/rickandmorty/img/Prototipo2.jpg)
 
@@ -36,110 +39,41 @@ Nos organizamos usando la gran plataforma de Trello para descargar las tareas qu
 
 En nuestra investigación:
 La serie de Rick & Morty tiene 6 temporadas y puede llegar a ser complicada ya que hay muchísimos personajes, entre ellos hay clones, aliens, robots, etc. 
-Nuestra página ayudaría al usuario (fan) a conocer un poco más sobre los personajes, y como son demasiados, hay un filtrado por nombre, o por categorías. Si solo sabe el nombre, de la misma forma puede buscarlo por nombre.
+Nuestra página ayudaría al usuario (fan) a conocer un poco más sobre los personajes, y como son demasiados, hay un filtrado por nombre, o por categorías. Si sólo sabe el nombre, de la misma forma puede buscarlo por nombre.
 Además, si el usuario desea conocer un poco más de la serie y personajes que no conoce, esta página le da un breve juego de interacción en el que le dará un personaje cuando escriba su nombre, el resultado podría ser cualquiera.
 
 ![Historias-usuario](src/data/rickandmorty/img/Historias-usuario.jpg)
 
-Probamos nuestra página con algunas personas, y nos dieron algunas sugerencias sobre la interfaz, por lo tanto hicimos algunos cuantos ajustes 🔩.
+Probamos nuestra página con algunas personas, y nos dieron algunas sugerencias sobre la interfaz, por lo tanto hicimos algunos ajustes 🔩.
 
 ![Final-sugerencias](src/data/rickandmorty/img/Final-sugerencias-funcionando.jpg)
 
 Y ahora, es así como se ve la página al final:
 
 ![Página-funcionando](src/data/rickandmorty/img/Página-funcionando.jpg)
+![Responsive-design](src/data/rickandmorty/img/responsive-cel.jpeg)
 
 Esperamos que te ayude a entender mejor la serie y, ¡qué te diviertas!
 
 ### 2. Aspectos Técnicos
 
+Probamos varios escenarios con nuestras funciones para encontrar errores.
+
 ![Passed-test](src/data/rickandmorty/img/Pass-test.jpg)
 
 
+### 3. Problemas de Usabilidad (Resueltos)
 
+* [ ] Considerábamos una página de inicio y nos sugirieron descartarlo.
+* [ ] Se nos sugirío poner el logo de la serie para dar contexto.
+* [ ] Nos sugirieon una herramienta para mejorar la visualización como los contrastes de color.
+* [ ] El background tuvo una mejora.
+* [ ] Descartamos filtrar los personajes por género, ya que nos pareció irrelevante.
+* [ ] Implementamos una tipografía diferente para su legibilidad.
+* [ ] Un diseño responsivo a nuestro buscador.
+* [ ] Buscamos que fuera más interactivo el cálculo para que el usuario conociera más personajes.
 
-
-
-
-- [ ] **Módulos de ECMAScript (ES Modules)**
-
-  <details><summary>Links</summary><p>
-
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
-
-- [ ] **Uso de linter (ESLINT)**
-
-
-### `src/index.html`
-
-Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
-acá va la página que se mostrará al usuario. También nos sirve para indicar
-qué scripts se usarán y unir todo lo que hemos hecho.
-
-### `src/main.js`
-
-Recomendamos usar `src/main.js` para todo tu código que tenga que ver con
-mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
-interacción con el DOM. Operaciones como creación de nodos, registro de
-manejadores de eventos (_event listeners_ o _event handlers_), ....
-
-Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
-
-En este archivo encontrarás una serie de _imports_ _comentados_. Para _cargar_
-las diferentes fuentes de datos tendrás que _descomentar_ la línea
-correspondiente.
-
-Por ejemplo, si "descomentamos" la siguiente línea:
-
-```js
-// import data from './data/lol/lol.js';
-```
-
-La línea quedaría así:
-
-```js
-import data from './data/lol/lol.js';
-```
-
-Y ahora tendríamos la variable `data` disponible en el script `src/main.js`.
-
-### `src/data.js`
-
-
-* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
-  cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada.
-
-Estos nombres de funciones y de parámetros son solamente referenciales, lo que
-decidas depende de tu propia implementación.
-
-Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM. Estas funciones serán después usadas desde el archivo
-`src/main.js`, al cargar la página, y cada vez que el usuario interactúe (click,
-filtrado, ordenado, ...).
-
-### `test/data.spec.js`
-
-## 9. Checklist
-
-* [ ] Usa VanillaJS.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+##### Este proyecto fue creado por las desarrolladoras:
+[Ivonne Conde](https://github.com/IvonneConde),
+[Cynthia C. Mtz.](https://github.com/CynCaro)
+en proceso con [Laboratoria](https://github.com/Laboratoria)
