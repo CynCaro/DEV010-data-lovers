@@ -1,4 +1,4 @@
-# ![logo](src\data\rickandmorty\img\logo.png)
+# ![logo](src/data/rickandmorty/img/logo.png)
 
 
 ## ¡Bienvenidas a la aventura interdimensional de la página de personajes de Rick y Morty!
@@ -11,7 +11,7 @@ Pero eso no es todo. Si deseas explorar más allá, tenemos una vasta colección
 
 ¿Buscas a ese personaje escurridizo que solo apareció una vez en un capítulo? No te preocupes, nuestra barra de búsqueda te ayudará a encontrarlo en un abrir y cerrar de portales. ¡La diversión de explorar el multiverso ahora está en tus manos!
 
-Así que, fanática intrépida, prepárate para sumergirte en un océano de datos, aventuras y personajes estrafalarios. Nuestra página te ofrece la herramienta definitiva para saciar tu curiosidad y explorar todos los recovecos de la serie. 
+Así que, fanática intrépida, prepára/e para sumergirte en un océano de datos, aventuras y personajes estrafalarios. Nuestra página te ofrece la herramienta definitiva para saciar tu curiosidad y explorar todos los recovecos de la serie. 
 ¡[Haz clic](aquí va la url), descubre y diviértete en el maravilloso mundo de Rick y Morty como nunca antes!
 
 
@@ -24,36 +24,36 @@ Para esta divertida aventura, iniciamos con un prototipo a lapiz (pluma) y papel
 ![Prototipo-baja2](url de la ubicación)
 
 Despúes, pasamos a hacerlo un poco más real.
-![Protitipo1](src\data\rickandmorty\img\Prototipo1.jpg)
-![Prototipo2](src\data\rickandmorty\img\Prototipo2.jpg)
+![Protitipo1](src/data/rickandmorty/img/Prototipo1.jpg)
+![Prototipo2](src/data/rickandmorty/img/Prototipo2.jpg)
 
 Como verás, al principio buscamos que nuestra página tuviera un inicio, pero para qué retrasar la diversión si podemos llegar de una sola vez. 😉🌠
 
 ¿Pero cómo pusimos manos a la obra?
 Nos organizamos usando la gran plataforma de Trello para descargar las tareas que debíamos hacer, según cada Historia de usuario.
 
-![Trello](src\data\rickandmorty\img\Organización.jpg)
+![Trello](src/data/rickandmorty/img/Organización.jpg)
 
 En nuestra investigación:
 La serie de Rick & Morty tiene 6 temporadas y puede llegar a ser complicada ya que hay muchísimos personajes, entre ellos hay clones, aliens, robots, etc. 
 Nuestra página ayudaría al usuario (fan) a conocer un poco más sobre los personajes, y como son demasiados, hay un filtrado por nombre, o por categorías. Si solo sabe el nombre, de la misma forma puede buscarlo por nombre.
 Además, si el usuario desea conocer un poco más de la serie y personajes que no conoce, esta página le da un breve juego de interacción en el que le dará un personaje cuando escriba su nombre, el resultado podría ser cualquiera.
 
-![Historias-usuario](src\data\rickandmorty\img\Historias-usuario.jpg)
+![Historias-usuario](src/data/rickandmorty/img/Historias-usuario.jpg)
 
 Probamos nuestra página con algunas personas, y nos dieron algunas sugerencias sobre la interfaz, por lo tanto hicimos algunos cuantos ajustes 🔩.
 
-![Final-sugerencias](src\data\rickandmorty\img\Final-sugerencias-funcionando.jpg)
+![Final-sugerencias](src/data/rickandmorty/img/Final-sugerencias-funcionando.jpg)
 
 Y ahora, es así como se ve la página al final:
 
-![Página-funcionando](src\data\rickandmorty\img\Página-funcionando.jpg)
+![Página-funcionando](src/data/rickandmorty/img/Página-funcionando.jpg)
 
 Esperamos que te ayude a entender mejor la serie y, ¡qué te diviertas!
 
 ### 2. Aspectos Técnicos
 
-![Passed-test](src\data\rickandmorty\img\Pass-test.jpg)
+![Passed-test](src/data/rickandmorty/img/Pass-test.jpg)
 
 
 
