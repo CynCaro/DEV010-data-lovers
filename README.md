@@ -21,7 +21,7 @@ Así que, fanática intrépida, prepára/e para sumergirte en un océano de dato
 
 Para esta divertida aventura, iniciamos con un prototipo a lápiz (pluma) y papel, sobre cómo nos imaginamos que, nosotras como fans de la serie, nos gustaría buscar y encontrar la información.
 ![Prototipo-baja1](src/data/rickandmorty/img/Prototipo-baja1.jpg)
-![Prototipo-baja2](src/data/rickandmorty/img/Prototipo2.jpg)
+![Prototipo-baja2](src/data/rickandmorty/img/Prototipo-baja2.jpg)
 
 Despúes, pasamos a hacerlo un poco más real.
 ![Protitipo1](src/data/rickandmorty/img/Prototipo1.jpg)
