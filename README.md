@@ -19,9 +19,9 @@ Así que, fanática intrépida, prepára/e para sumergirte en un océano de dato
 
 ## 1. Proceso creativo y desarrollo.
 
-Para esta divertida aventura, iniciamos con un prototipo a lapiz (pluma) y papel, sobre cómo nos imaginamos que, nosotras como fans de la serie, nos gustaría buscar y encontrar la información.
-![Prototipo-baja1](url de la ubicación)
-![Prototipo-baja2](url de la ubicación)
+Para esta divertida aventura, iniciamos con un prototipo a lápiz (pluma) y papel, sobre cómo nos imaginamos que, nosotras como fans de la serie, nos gustaría buscar y encontrar la información.
+![Prototipo-baja1](src/data/rickandmorty/img/Prototipo-baja1.jpg)
+![Prototipo-baja2](src/data/rickandmorty/img/Prototipo2.jpg)
 
 Despúes, pasamos a hacerlo un poco más real.
 ![Protitipo1](src/data/rickandmorty/img/Prototipo1.jpg)
