@@ -9,11 +9,11 @@ export function searchCharacters(name, data) {
   return filteredCharacters
 }
 export function sortByStatus(data, selectedStatus) {
-  if (!data || data.length === 0) {
-    return []; // Devuelve un array vacío si data es nulo o vacío
+  if (!data || data.length === 0) { //Comprueba si 'data' es nulo o está vacío
+    return []; //Devuelve un array vacío si data es nulo o vacío
   }
   if (selectedStatus === 'all') {
-    return data.slice(); // slice= retorna un nuevo arreglo 
+    return data.slice(); //slice= retorna un nuevo arreglo 
   }
   const filteredData = data.filter(character => character.status === selectedStatus);  //primero se debe filtrar para ordenar
   return filteredData.sort((a, b) => {   //sort se le debe dar a la matriz,en este caso
@@ -30,7 +30,7 @@ export function sortBySpecies(data, selectedSpecies) {
     return []; // Devuelve un array vacío si data es nulo o vacío
   }
   if (selectedSpecies === 'all') {
-    return data.slice(); // slice= retorna un nuevo arreglo 
+    return data.slice(); // slice = retorna un nuevo arreglo 
   }
   const filteredData = data.filter(character => character.species === selectedSpecies);  //primero se debe filtrar para ordenar
   return filteredData.sort((a, b) => {   //sort se le debe dar a la matriz,en este caso
@@ -44,7 +44,7 @@ export function sortBySpecies(data, selectedSpecies) {
 } 
 
 export function showRandomCharacter (data){
-  if (!data || data.length === 0) { // Si el conjunto de datos está vacío o no se proporcionó, devuelve 0
+  if (!data || data.length === 0) { //Si el conjunto de datos está vacío o no se proporcionó, devuelve 0
     return [0]; 
   }
   const randomIndex = Math.floor(Math.random()* data.length);

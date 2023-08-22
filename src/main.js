@@ -32,7 +32,7 @@ function assignButtonClickEvents() { //Función para asignar eventos click a los
 
 function showCharacters(characters) {
   container.innerHTML = "";       //Se muestra el contenedor vacio para mostrarnos la búsqueda
-  characters.forEach((character) => {    //aquí está recorreiendo al igual que al principioo
+  characters.forEach((character) => {    //aquí está recorriendo al igual que al principioo
     const characterData = `
       <div class="flex-item">
         <img src="${character.image}">
@@ -46,7 +46,7 @@ function showCharacters(characters) {
         </div>
       </div>
     `;
-    container.insertAdjacentHTML("beforeend", characterData);
+    container.insertAdjacentHTML("beforeend", characterData); //Se agrega el contenido HTML almacenado en la variable characterData como el último elemento hijo dentro del elemento representado por la variable container
   });
   assignButtonClickEvents(); // Asignar eventos click a los nuevos botones agregados.
 }
